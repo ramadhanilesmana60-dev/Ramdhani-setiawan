@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
+
+class GuruMiddleware
+{
+    public function handle(Request $request, Closure $next): Response
+    {
+        if (!in_array(auth()->user()->role, ['guru', 'admin'])) {
+            abort(403);
+        }
+        return $next($request);
+    }
+}

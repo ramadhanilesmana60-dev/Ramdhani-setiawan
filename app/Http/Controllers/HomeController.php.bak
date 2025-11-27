@@ -1,0 +1,49 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Artikel;
+use App\Models\Kategori;
+use Illuminate\Http\Request;
+
+class HomeController extends Controller
+{
+    public function index(Request $request)
+    {
+        $query = Artikel::with(['user', 'kategori', 'likes', 'komentars'])
+            ->where('status', 'published');
+        
+        if ($request->search) {
+            $query->where('judul', 'like', '%' . $request->search . '%');
+        }
+        
+        if ($request->kategori) {
+            $query->where('kategori_id', $request->kategori);
+        }
+        
+        $artikels = $query->latest()->paginate(6);
+        
+        $kategoris = Kategori::withCount(['artikels' => function($q) {
+            $q->where('status', 'published');
+        }])->get();
+        
+        $artikelPopuler = Artikel::with(['user', 'kategori', 'likes', 'komentars'])
+            ->where('status', 'published')
+            ->get()
+            ->sortByDesc(function($artikel) {
+                return $artikel->likes->count() + $artikel->komentars->count();
+            })
+            ->take(3);
+        
+        return view('home', compact('artikels', 'kategoris', 'artikelPopuler'));
+    }
+
+    public function show($id)
+    {
+        $artikel = Artikel::with(['user', 'kategori', 'komentars.user', 'likes'])
+            ->where('status', 'published')
+            ->findOrFail($id);
+        
+        return view('artikel.show', compact('artikel'));
+    }
+}

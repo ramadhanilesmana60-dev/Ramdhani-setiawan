@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Guide - Aplikasi E-Mading Sekolah</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #3B82F6;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #1E40AF;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+            margin: 10px 0 0 0;
+        }
+        
+        h2 {
+            color: #1E40AF;
+            border-left: 4px solid #3B82F6;
+            padding-left: 15px;
+            margin-top: 30px;
+        }
+        
+        h3 {
+            color: #3B82F6;
+            margin-top: 25px;
+        }
+        
+        .feature-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .role-section {
+            background: linear-gradient(135deg, #3B82F6, #1E40AF);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .role-section h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .step-list {
+            background: #f0f9ff;
+            border-left: 4px solid #3B82F6;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        
+        .step-list ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .step-list li {
+            margin: 8px 0;
+        }
+        
+        .warning {
+            background: #fef3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .account-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .account-table th,
+        .account-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .account-table th {
+            background: #3B82F6;
+            color: white;
+        }
+        
+        .account-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .screenshot-placeholder {
+            background: #e9ecef;
+            border: 2px dashed #adb5bd;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+            color: #6c757d;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            .page-break {
+                page-break-before: always;
+            }
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+        
+        .toc a {
+            text-decoration: none;
+            color: #3B82F6;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>USER GUIDE</h1>
+            <h2 style="margin: 10px 0; border: none; padding: 0;">Aplikasi E-Mading Sekolah</h2>
+            <p>Panduan Lengkap Penggunaan Electronic Magazine Dinding</p>
+            <p><strong>Versi 1.0 | <?php echo date('F Y'); ?></strong></p>
+        </div>
+
+        <!-- Daftar Isi -->
+        <div class="toc">
+            <h3>Daftar Isi</h3>
+            <ul>
+                <li><a href="#pengenalan">1. Pengenalan Aplikasi</a></li>
+                <li><a href="#instalasi">2. Instalasi dan Setup</a></li>
+                <li><a href="#akun-default">3. Akun Default</a></li>
+                <li><a href="#cara-login">4. Cara Login</a></li>
+                <li><a href="#panduan-siswa">5. Panduan untuk Siswa</a></li>
+                <li><a href="#panduan-guru">6. Panduan untuk Guru/Admin</a></li>
+                <li><a href="#panduan-pengunjung">7. Panduan untuk Pengunjung</a></li>
+                <li><a href="#fitur-keamanan">8. Fitur Keamanan</a></li>
+                <li><a href="#troubleshooting">9. Troubleshooting</a></li>
+            </ul>
+        </div>
+
+        <!-- Pengenalan -->
+        <div id="pengenalan">
+            <h2>1. Pengenalan Aplikasi</h2>
+            <p>E-Mading (Electronic Magazine Dinding) adalah aplikasi web yang memungkinkan siswa dan guru berkolaborasi dalam membuat dan mengelola konten artikel sekolah secara digital.</p>
+            
+            <div class="feature-box">
+                <h3>Tujuan Aplikasi</h3>
+                <ul>
+                    <li>Digitalisasi mading sekolah tradisional</li>
+                    <li>Meningkatkan partisipasi siswa dalam menulis</li>
+                    <li>Memudahkan pengelolaan konten oleh guru</li>
+                    <li>Menyediakan platform berbagi informasi sekolah</li>
+                </ul>
+            </div>
+
+            <div class="info">
+                <strong>Teknologi yang Digunakan:</strong><br>
+                Framework: Laravel 11 | Database: SQLite/MySQL | Frontend: Blade + Tailwind CSS
+            </div>
+        </div>
+
+        <!-- Instalasi -->
+        <div class="page-break" id="instalasi">
+            <h2>2. Instalasi dan Setup</h2>
+            
+            <div class="step-list">
+                <h3>Langkah Instalasi:</h3>
+                <ol>
+                    <li>Clone repository dari Git</li>
+                    <li>Jalankan <code>composer install</code> untuk menginstall dependencies</li>
+                    <li>Copy file <code>.env.example</code> menjadi <code>.env</code></li>
+                    <li>Generate application key dengan <code>php artisan key:generate</code></li>
+                    <li>Jalankan migration dan seeder: <code>php artisan migrate --seed</code></li>
+                    <li>Buat storage link: <code>php artisan storage:link</code></li>
+                    <li>Jalankan server: <code>php artisan serve</code></li>
+                </ol>
+            </div>
+
+            <div class="warning">
+                <strong>Catatan Penting:</strong> Pastikan PHP versi 8.1+ dan Composer sudah terinstall di sistem Anda.
+            </div>
+        </div>
+
+        <!-- Akun Default -->
+        <div id="akun-default">
+            <h2>3. Akun Default</h2>
+            <p>Setelah menjalankan seeder, tersedia akun default berikut:</p>
+            
+            <table class="account-table">
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Admin</strong></td>
+                        <td>admin</td>
+                        <td>admin123</td>
+                        <td>Akses penuh ke semua fitur</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Guru</strong></td>
+                        <td>guru</td>
+                        <td>guru123</td>
+                        <td>Dapat mengelola artikel dan menyetujui publikasi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Siswa</strong></td>
+                        <td>ramdhani</td>
+                        <td>siswa123</td>
+                        <td>Dapat menulis artikel dan berkomentar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Cara Login -->
+        <div id="cara-login">
+            <h2>4. Cara Login</h2>
+            
+            <div class="step-list">
+                <h3>Langkah Login:</h3>
+                <ol>
+                    <li>Buka aplikasi di browser (biasanya http://localhost:8000)</li>
+                    <li>Klik tombol "Login" di halaman utama</li>
+                    <li>Masukkan username dan password sesuai role Anda</li>
+                    <li>Klik tombol "Masuk"</li>
+                    <li>Anda akan diarahkan ke dashboard sesuai role</li>
+                </ol>
+            </div>
+
+            <div class="screenshot-placeholder">
+                [Screenshot: Halaman Login]
+            </div>
+        </div>
+
+        <!-- Panduan Siswa -->
+        <div class="page-break" id="panduan-siswa">
+            <h2>5. Panduan untuk Siswa</h2>
+            
+            <div class="role-section">
+                <h3>🎓 Fitur untuk Siswa</h3>
+                <ul>
+                    <li>Membuat artikel baru</li>
+                    <li>Mengedit artikel milik sendiri</li>
+                    <li>Membaca dan berkomentar pada artikel</li>
+                    <li>Memberikan like pada artikel</li>
+                </ul>
+            </div>
+
+            <h3>5.1 Membuat Artikel Baru</h3>
+            <div class="step-list">
+                <ol>
+                    <li>Login dengan akun siswa</li>
+                    <li>Klik menu "Artikel Saya" di dashboard</li>
+                    <li>Klik tombol "Buat Artikel Baru"</li>
+                    <li>Isi form artikel:
+                        <ul>
+                            <li><strong>Judul:</strong> Masukkan judul artikel yang menarik</li>
+                            <li><strong>Kategori:</strong> Pilih kategori yang sesuai</li>
+                            <li><strong>Isi Artikel:</strong> Tulis konten artikel</li>
+                            <li><strong>Foto:</strong> Upload gambar pendukung (opsional)</li>
+                        </ul>
+                    </li>
+                    <li>Klik "Simpan" untuk menyimpan sebagai draft</li>
+                </ol>
+            </div>
+
+            <div class="info">
+                <strong>Catatan:</strong> Artikel yang dibuat siswa akan tersimpan sebagai draft dan perlu persetujuan guru untuk dipublikasikan.
+            </div>
+
+            <h3>5.2 Mengedit Artikel</h3>
+            <div class="step-list">
+                <ol>
+                    <li>Buka halaman "Artikel Saya"</li>
+                    <li>Cari artikel yang ingin diedit</li>
+                    <li>Klik tombol "Edit" pada artikel tersebut</li>
+                    <li>Lakukan perubahan yang diperlukan</li>
+                    <li>Klik "Update" untuk menyimpan perubahan</li>
+                </ol>
+            </div>
+
+            <h3>5.3 Berkomentar dan Like</h3>
+            <div class="step-list">
+                <ol>
+                    <li>Buka artikel yang ingin dikomentari</li>
+                    <li>Scroll ke bagian bawah artikel</li>
+                    <li>Tulis komentar di kolom yang tersedia</li>
+                    <li>Klik "Kirim Komentar"</li>
+                    <li>Untuk like, klik ikon ❤️ di artikel</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Panduan Guru -->
+        <div class="page-break" id="panduan-guru">
+            <h2>6. Panduan untuk Guru/Admin</h2>
+            
+            <div class="role-section">
+                <h3>👨‍🏫 Fitur untuk Guru/Admin</h3>
+                <ul>
+                    <li>Menulis artikel sendiri</li>
+                    <li>Mengedit semua artikel</li>
+                    <li>Menyetujui artikel siswa</li>
+                    <li>Mengelola komentar</li>
+                    <li>Generate laporan</li>
+                    <li>Melihat dashboard statistik</li>
+                </ul>
+            </div>
+
+            <h3>6.1 Menyetujui Artikel Siswa</h3>
+            <div class="step-list">
+                <ol>
+                    <li>Login dengan akun guru/admin</li>
+                    <li>Buka menu "Kelola Artikel"</li>
+                    <li>Lihat daftar artikel dengan status "Draft"</li>
+                    <li>Klik "Lihat" untuk membaca artikel</li>
+                    <li>Jika artikel layak, klik "Setujui untuk Publikasi"</li>
+                    <li>Artikel akan muncul di halaman utama</li>
+                </ol>
+            </div>
+
+            <h3>6.2 Mengelola Artikel</h3>
+            <div class="step-list">
+                <ol>
+                    <li>Buka menu "Kelola Artikel"</li>
+                    <li>Lihat semua artikel (draft dan published)</li>
+                    <li>Gunakan tombol aksi:
+                        <ul>
+                            <li><strong>Edit:</strong> Mengubah konten artikel</li>
+                            <li><strong>Hapus:</strong> Menghapus artikel</li>
+                            <li><strong>Publish/Unpublish:</strong> Mengatur status publikasi</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <h3>6.3 Generate Laporan</h3>
+            <div class="step-list">
+                <ol>
+                    <li>Buka menu "Laporan"</li>
+                    <li>Lihat statistik artikel yang dipublikasikan</li>
+                    <li>Klik "Cetak Laporan" untuk mencetak</li>
+                    <li>Laporan menampilkan:
+                        <ul>
+                            <li>Total artikel published</li>
+                            <li>Detail setiap artikel</li>
+                            <li>Jumlah likes dan komentar</li>
+                            <li>Tanggal publikasi</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <h3>6.4 Dashboard Statistik</h3>
+            <div class="feature-box">
+                <p>Dashboard admin menampilkan:</p>
+                <ul>
+                    <li>Total artikel published</li>
+                    <li>Total artikel draft</li>
+                    <li>Total pengguna</li>
+                    <li>Artikel terpopuler</li>
+                    <li>Aktivitas terbaru</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Panduan Pengunjung -->
+        <div id="panduan-pengunjung">
+            <h2>7. Panduan untuk Pengunjung</h2>
+            
+            <div class="role-section">
+                <h3>👥 Fitur untuk Pengunjung</h3>
+                <ul>
+                    <li>Membaca artikel yang dipublikasikan</li>
+                    <li>Melihat artikel tanpa login</li>
+                    <li>Browse berdasarkan kategori</li>
+                </ul>
+            </div>
+
+            <h3>7.1 Membaca Artikel</h3>
+            <div class="step-list">
+                <ol>
+                    <li>Buka halaman utama aplikasi</li>
+                    <li>Lihat daftar artikel yang dipublikasikan</li>
+                    <li>Klik judul artikel untuk membaca selengkapnya</li>
+                    <li>Gunakan filter kategori untuk mencari artikel spesifik</li>
+                </ol>
+            </div>
+
+            <div class="warning">
+                <strong>Batasan Pengunjung:</strong> Pengunjung tidak dapat menulis artikel, berkomentar, atau memberikan like tanpa login.
+            </div>
+        </div>
+
+        <!-- Fitur Keamanan -->
+        <div class="page-break" id="fitur-keamanan">
+            <h2>8. Fitur Keamanan</h2>
+            
+            <div class="feature-box">
+                <h3>Sistem Keamanan yang Diterapkan:</h3>
+                <ul>
+                    <li><strong>Role-based Access Control:</strong> Setiap user memiliki role dengan hak akses berbeda</li>
+                    <li><strong>Artikel Ownership:</strong> Siswa hanya dapat mengedit artikel milik sendiri</li>
+                    <li><strong>Approval System:</strong> Artikel siswa harus disetujui sebelum dipublikasikan</li>
+                    <li><strong>Input Validation:</strong> Semua input divalidasi untuk mencegah serangan</li>
+                    <li><strong>File Upload Security:</strong> Validasi tipe dan ukuran file</li>
+                    <li><strong>CSRF Protection:</strong> Perlindungan terhadap serangan CSRF</li>
+                </ul>
+            </div>
+
+            <h3>8.1 Hierarki Hak Akses</h3>
+            <table class="account-table">
+                <thead>
+                    <tr>
+                        <th>Fitur</th>
+                        <th>Admin</th>
+                        <th>Guru</th>
+                        <th>Siswa</th>
+                        <th>Pengunjung</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Baca Artikel</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <td>Tulis Artikel</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                    </tr>
+                    <tr>
+                        <td>Edit Semua Artikel</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                    </tr>
+                    <tr>
+                        <td>Approve Artikel</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                    </tr>
+                    <tr>
+                        <td>Generate Laporan</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                    </tr>
+                    <tr>
+                        <td>Komentar & Like</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div id="troubleshooting">
+            <h2>9. Troubleshooting</h2>
+            
+            <h3>9.1 Masalah Umum dan Solusi</h3>
+            
+            <div class="feature-box">
+                <h4>❌ Tidak Bisa Login</h4>
+                <p><strong>Solusi:</strong></p>
+                <ul>
+                    <li>Pastikan username dan password benar</li>
+                    <li>Cek apakah database sudah di-seed</li>
+                    <li>Periksa koneksi database di file .env</li>
+                </ul>
+            </div>
+
+            <div class="feature-box">
+                <h4>❌ Gambar Tidak Muncul</h4>
+                <p><strong>Solusi:</strong></p>
+                <ul>
+                    <li>Jalankan <code>php artisan storage:link</code></li>
+                    <li>Periksa permission folder storage</li>
+                    <li>Pastikan file gambar ter-upload dengan benar</li>
+                </ul>
+            </div>
+
+            <div class="feature-box">
+                <h4>❌ Error 500 Internal Server</h4>
+                <p><strong>Solusi:</strong></p>
+                <ul>
+                    <li>Periksa log error di <code>storage/logs/laravel.log</code></li>
+                    <li>Pastikan semua dependencies ter-install</li>
+                    <li>Cek konfigurasi database</li>
+                    <li>Jalankan <code>php artisan config:clear</code></li>
+                </ul>
+            </div>
+
+            <div class="feature-box">
+                <h4>❌ Artikel Tidak Muncul di Halaman Utama</h4>
+                <p><strong>Solusi:</strong></p>
+                <ul>
+                    <li>Pastikan artikel sudah di-approve oleh guru</li>
+                    <li>Cek status artikel (harus "published")</li>
+                    <li>Refresh halaman atau clear cache browser</li>
+                </ul>
+            </div>
+
+            <h3>9.2 Kontak Support</h3>
+            <div class="info">
+                <p>Jika mengalami masalah yang tidak tercantum di atas, silakan hubungi:</p>
+                <ul>
+                    <li><strong>Developer:</strong> Tim Pengembang Aplikasi</li>
+                    <li><strong>Email:</strong> support@emading-sekolah.com</li>
+                    <li><strong>Dokumentasi:</strong> Lihat file README.md di repository</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="margin-top: 50px; padding-top: 20px; border-top: 2px solid #3B82F6; text-align: center; color: #666;">
+            <p><strong>User Guide Aplikasi E-Mading Sekolah</strong></p>
+            <p>Dibuat untuk Ujian Kompetensi Keahlian (UKK)</p>
+            <p>© <?php echo date('Y'); ?> - Semua hak cipta dilindungi</p>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling untuk link internal
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
